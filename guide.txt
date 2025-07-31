@@ -1,0 +1,18 @@
+Project Setup Guide - Intelligent Cash Flow Forecasting
+
+1. Created virtual environment:
+   python -m venv venv
+   .\venv\Scripts\activate
+
+2. Installed libraries:
+   pandas, prophet, scikit-learn, streamlit, faker, python-dotenv
+
+3. Generated folder structure:
+   app/, automation/, data/, notebooks/, scripts/, utils/
+
+4. Set up Git:
+   git init
+   git remote add origin https://github.com/your-username/intelligent_cashflow_forecasting.git
+   git add .
+   git commit -m "Initial project setup"
+   git push -u origin main

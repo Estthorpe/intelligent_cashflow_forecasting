@@ -1,0 +1,19 @@
+# Virtual env
+venv/
+
+# Data
+*.csv
+*.parquet
+data/
+models/
+outputs/
+logs/
+
+# Secrets
+.env
+*.json
+
+# Python cache
+__pycache__/
+*.pyc
+
