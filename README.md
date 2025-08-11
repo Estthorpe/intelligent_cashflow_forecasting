@@ -34,10 +34,8 @@ This project automates the process end-to-end:
 
 ---
 
-## 🏗 Architecture
+## Architecture
 
-```mermaid
-graph LR
     A[CSV / Google Sheets] --> B[Prophet Forecast Model]
     B --> C[Anomaly Detection]
     C -->|Residuals + Z-score| D[n8n Automation]
@@ -46,8 +44,7 @@ graph LR
     C --> F
     D -->|Google Sheets Log| G[Daily Forecast Log]
 
-
-🚀 How to Run
+ How to Run
 1. Install Requirements
 pip install -r requirements.txt
 
