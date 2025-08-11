@@ -16,3 +16,68 @@ Project Setup Guide - Intelligent Cash Flow Forecasting
    git add .
    git commit -m "Initial project setup"
    git push -u origin main
+
+
+PHASE 2: Data Preparation
+Downloaded / generated AP/AR dataset.
+
+Cleaned data (dates, nulls, duplicates).
+
+Aggregated to daily net cash flow.
+
+Saved cleaned dataset to data/processed/clean_ap_ar.csv.
+
+PHASE 3: Forecasting Model
+Used Prophet for 30–90 day forecasts.
+
+Added features: day-of-week, month sin/cos, AP/AR rolling averages.
+
+Performed rolling backtests to find the most stable training window.
+
+Saved best model (best_prophet.pkl), forecasts, and residuals.
+
+PHASE 4: Anomaly Detection
+Computed residuals = actual – forecast.
+
+Calculated rolling Z-score.
+
+Flagged anomalies where |Z| > threshold.
+
+Saved anomalies table to outputs/anomalies/.
+
+PHASE 5: Visualization
+Built Streamlit dashboard showing:
+
+Forecast vs actuals (with anomaly dots)
+
+Residuals over time
+
+Z-scores and thresholds
+
+KPIs and anomaly table
+
+Added controls for thresholds and lookback.
+
+Saved latest alert JSON to outputs/alerts/ for automation.
+
+PHASE 6: Next Step - Automation with n8n
+n8n will run daily at 7:00am.
+
+It will:
+
+Run Python forecast script
+
+Check alert JSON
+
+If anomaly: send email
+
+Log forecast to Google Sheets
+
+KEY OUTPUTS:
+data/processed/clean_ap_ar.csv
+
+outputs/forecasts/history_with_residuals.csv
+
+outputs/alerts/latest_alert_from_app.json
+
+outputs/backtests/stability_table.csv
