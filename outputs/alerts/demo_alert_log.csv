@@ -1,0 +1,2 @@
+timestamp,ds,anomaly_trigger,severity,anomaly_type,subject
+2025-08-11T20:00:39.293582,2019-01-14,False,info,Unexpected Inflow,[INFO] No anomaly trigger on 2019-01-14

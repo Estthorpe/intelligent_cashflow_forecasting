@@ -6,7 +6,9 @@ venv/
 *.parquet
 data/
 models/
-outputs/
+outputs/*
+!outputs/alerts/
+!outputs/alerts/*
 logs/
 
 # Secrets
@@ -17,3 +19,7 @@ logs/
 __pycache__/
 *.pyc
 
+# keep most outputs ignored…
+outputs/*
+# …but DO commit alerts folder (for automation demo)
+!outputs/alerts/
