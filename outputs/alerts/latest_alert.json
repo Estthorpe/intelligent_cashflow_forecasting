@@ -1,0 +1,15 @@
+{
+  "anomaly_trigger": false,
+  "email_subject": "[INFO] No anomaly trigger on 2019-01-14",
+  "email_body": "Date: 2019-01-14\nType: Unexpected Inflow\nSeverity: INFO\nActual (y): -9810920.6925\nForecast (yhat): -10502361.580050915\nResidual: 691440.8875509165\nZ-score: n/a\nPct Deviation vs Forecast: 6.6%\nBand: [-11395245.434211353 \u2014 -9649194.960092654]",
+  "latest": {
+    "ds": "2019-01-14T00:00:00",
+    "y": -9810920.6925,
+    "yhat": -10502361.580050915,
+    "residual": 691440.8875509165,
+    "zscore": NaN,
+    "severity": "info",
+    "anomaly_type": "Unexpected Inflow",
+    "pct_deviation": 0.06583670560955533
+  }
+}

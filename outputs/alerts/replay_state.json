@@ -1,0 +1,7 @@
+{
+  "pointer_iso": "2019-01-14 00:00:00",
+  "step_days": 1,
+  "inject_demo_anomalies": false,
+  "inject_every_n_days": 7,
+  "step_idx": 1
+}

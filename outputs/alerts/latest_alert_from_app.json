@@ -1,0 +1,19 @@
+{
+  "anomaly_trigger": false,
+  "email_subject": "[INFO] No anomaly trigger on 2020-05-11",
+  "email_body": "Forecast within expected range on 2020-05-11.",
+  "latest": {
+    "ds": "2020-05-11T00:00:00",
+    "y": -11398955.2575,
+    "yhat": -9243056.702567575,
+    "yhat_lower": -10052113.53861604,
+    "yhat_upper": -8442800.835717438,
+    "residual": -2155898.554932425,
+    "zscore": -1.1235365175329912,
+    "anomaly_zscore": false,
+    "anomaly_type": "Liquidity Gap",
+    "severity": "info",
+    "pct_deviation": 0.23324519412864256,
+    "anomaly_flag": false
+  }
+}
