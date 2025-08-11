@@ -1,0 +1,35 @@
+name: Daily Replay Alert
+
+on:
+  schedule:
+    - cron: "55 6 * * *"   # adjust for your preferred UTC time
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Initialize replay state (safe to re-run)
+        run: |
+          python scripts/automation/replay_init.py || true
+      - name: Advance replay & create alert JSON
+        run: |
+          python scripts/automation/replay_step.py
+      - name: Commit alert & state
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add outputs/alerts/latest_alert.json outputs/alerts/replay_state.json outputs/alerts/demo_alert_log.csv || true
+          git commit -m "chore: replay step & alert [skip ci]" || echo "No changes"
+          git push
