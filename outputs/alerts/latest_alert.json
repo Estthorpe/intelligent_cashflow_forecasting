@@ -7,7 +7,7 @@
     "y": -9810920.6925,
     "yhat": -10502361.580050915,
     "residual": 691440.8875509165,
-    "zscore": NaN,
+    "zscore": null,
     "severity": "info",
     "anomaly_type": "Unexpected Inflow",
     "pct_deviation": 0.06583670560955533
