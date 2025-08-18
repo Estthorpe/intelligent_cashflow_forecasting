@@ -1,5 +1,5 @@
 {
-  "anomaly_trigger": false,
+  "anomaly_trigger": true,
   "email_subject": "[INFO] No anomaly trigger on 2019-01-14",
   "email_body": "Date: 2019-01-14\nType: Unexpected Inflow\nSeverity: INFO\nActual (y): -9810920.6925\nForecast (yhat): -10502361.580050915\nResidual: 691440.8875509165\nZ-score: n/a\nPct Deviation vs Forecast: 6.6%\nBand: [-11395245.434211353 \u2014 -9649194.960092654]",
   "latest": {
