@@ -27,10 +27,22 @@ Finance teams often struggle to **predict cash flow** accurately and spot **crit
 This project automates the process end-to-end:
 
 1. **Data Pipeline** – Cleans & aggregates AP/AR transaction data to daily net cash flow.
-2. **Forecasting** – Uses Facebook Prophet to forecast 30–90 days ahead.
+2. **Forecasting** – Uses Facebook Prophet to forecast 30–90 days.
 3. **Anomaly Detection** – Flags unusual deviations using rolling Z-score logic.
-4. **Visualization** – Interactive dashboard via Streamlit.
+4. **Visualization** – An Interactive dashboard that visualizes anomalies interactively via Streamlit.
 5. **Automation** – n8n workflow to send email alerts and log forecasts daily.
+6. **n8n workflow automation** to:
+  - Pull anomaly results daily from GitHub.
+  - Send Gmail alerts when anomalies are detected.
+  - Append both anomalies and daily “no anomaly” heartbeats into Google Sheets for auditing.
+
+---
+
+## 🛠️ Tech Stack
+- **Python (Prophet, Pandas, NumPy)** – forecasting & anomaly detection
+- **Streamlit** – dashboard interface
+- **n8n** – workflow automation
+- **Google Sheets & Gmail APIs** – logging and alerting
 
 ---
 
